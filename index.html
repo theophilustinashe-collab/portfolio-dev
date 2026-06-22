@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Theophilus Dzingisai | Cybersecurity Specialist</title>
+<style>
+:root{
+--bg:#f8fafc;
+--card:rgba(255,255,255,.75);
+--text:#111827;
+--muted:#6b7280;
+--accent:#7c3aed;
+--accent2:#06b6d4;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+font-family:Segoe UI,Arial,sans-serif;
+background:var(--bg);
+color:var(--text);
+overflow-x:hidden;
+}
+body::before{
+content:"";
+position:fixed;
+width:500px;height:500px;
+background:linear-gradient(45deg,var(--accent),var(--accent2));
+filter:blur(180px);
+opacity:.2;
+top:-150px;right:-150px;
+z-index:-1;
+}
+nav{
+position:sticky;top:0;
+background:rgba(255,255,255,.8);
+backdrop-filter:blur(12px);
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+nav a{text-decoration:none;color:var(--text);margin-left:20px}
+.hero{
+min-height:90vh;
+display:grid;
+grid-template-columns:1.2fr 1fr;
+align-items:center;
+padding:5% 8%;
+gap:40px;
+}
+.hero h1{font-size:clamp(3rem,8vw,6rem);line-height:1}
+.hero span{color:var(--accent)}
+.hero p{color:var(--muted);margin:20px 0}
+.btn{
+display:inline-block;
+padding:14px 26px;
+background:var(--accent);
+color:white;text-decoration:none;
+border-radius:999px;
+}
+.photo{
+height:420px;
+border-radius:30px;
+background:linear-gradient(135deg,#e5e7eb,#cbd5e1);
+display:flex;align-items:center;justify-content:center;
+font-size:1.2rem;color:#555;
+}
+section{padding:90px 8%}
+h2{font-size:2.5rem;margin-bottom:20px}
+.cardgrid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+.card{
+background:var(--card);
+backdrop-filter:blur(15px);
+padding:25px;
+border-radius:24px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+.tags span{
+display:inline-block;
+padding:10px 16px;
+margin:8px;
+border-radius:999px;
+background:white;
+box-shadow:0 4px 10px rgba(0,0,0,.08);
+}
+.timeline .card{margin-bottom:20px}
+.contact{
+text-align:center;
+}
+footer{
+padding:30px;
+text-align:center;
+background:#fff;
+margin-top:40px;
+}
+@media(max-width:900px){
+.hero{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<nav>
+<h3>Theophilus Dzingisai</h3>
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+
+<section class="hero">
+<div>
+<h1>Theophilus <span>Dzingisai</span></h1>
+<h3>Cybersecurity Specialist</h3>
+<p>
+Passionate about cybersecurity, web technologies, and building secure digital solutions that help organizations grow with confidence.
+</p>
+<a class="btn" href="#projects">View My Work</a>
+</div>
+
+<div class="photo">
+YOUR PHOTO HERE
+</div>
+</section>
+
+<section id="about">
+<h2>About Me</h2>
+<div class="card">
+<p>
+I am Theophilus Dzingisai, a cybersecurity specialist based in Gweru, Zimbabwe. My focus is helping businesses and organizations strengthen their digital presence through secure systems, modern websites, and practical technology solutions.
+</p>
+</div>
+</section>
+
+<section id="skills">
+<h2>Skills</h2>
+<div class="tags">
+<span>Cybersecurity</span>
+<span>Network Security</span>
+<span>Web Development</span>
+<span>HTML</span>
+<span>CSS</span>
+<span>JavaScript</span>
+<span>Security Awareness</span>
+<span>Risk Assessment</span>
+<span>Application Security</span>
+<span>Digital Solutions</span>
+</div>
+</section>
+
+<section id="projects">
+<h2>Projects</h2>
+<div class="cardgrid">
+<div class="card">
+<h3>Milan Restaurant Website</h3>
+<p>Premium hospitality website with modern branding, customer engagement features, and responsive design.</p>
+</div>
+
+<div class="card">
+<h3>CrownWeb Agency</h3>
+<p>Agency branding, service structure, digital strategy, and website planning.</p>
+</div>
+
+<div class="card">
+<h3>Business Management System</h3>
+<p>Custom business solution designed to improve workflow efficiency and operations.</p>
+</div>
+
+<div class="card">
+<h3>Portfolio Websites</h3>
+<p>Professional personal and business portfolio websites with modern UI design.</p>
+</div>
+
+<div class="card">
+<h3>Cybersecurity Projects</h3>
+<p>Security assessments, risk analysis, and cybersecurity awareness initiatives.</p>
+</div>
+</div>
+</section>
+
+<section>
+<h2>Journey</h2>
+<div class="timeline">
+<div class="card"><strong>2024</strong><br>Started building web and digital solutions.</div>
+<div class="card"><strong>2025</strong><br>Expanded into agency and business-focused projects.</div>
+<div class="card"><strong>2026</strong><br>Focused on cybersecurity and secure digital transformation.</div>
+</div>
+</section>
+
+<section id="contact" class="contact">
+<h2>Let's Work Together</h2>
+<div class="card">
+<p><strong>Email:</strong> theophilustinashe@gmail.com</p>
+<p><strong>Phone:</strong> +2638230962</p>
+<p><strong>Location:</strong> Gweru, Zimbabwe</p>
+<br>
+<p><strong>GitHub:</strong> Placeholder Link</p>
+<p><strong>LinkedIn:</strong> Placeholder Link</p>
+<p><strong>Facebook:</strong> Placeholder Link</p>
+<p><strong>Instagram:</strong> Placeholder Link</p>
+</div>
+</section>
+
+<footer>
+© 2026 Theophilus Dzingisai • Cybersecurity Specialist
+</footer>
+
+</body>
+</html>

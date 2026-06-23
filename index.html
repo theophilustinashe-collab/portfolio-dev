@@ -67,6 +67,20 @@ nav {
 }
 .nav-toggle:hover { border-color: var(--cyan); color: var(--cyan); }
 
+.nav-burger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 36px; height: 36px;
+  background: transparent; border: 1px solid var(--border); border-radius: 6px;
+  cursor: pointer; padding: 0; align-items: center;
+}
+.nav-burger span { width: 18px; height: 2px; background: var(--text); border-radius: 2px; transition: transform 0.2s, opacity 0.2s; }
+.nav-burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-burger.open span:nth-child(2) { opacity: 0; }
+.nav-burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 .hero {
   position: relative; z-index: 1;
   min-height: 92vh;
@@ -298,10 +312,53 @@ body.light nav { background: rgba(248,250,252,0.9); }
 @media (max-width: 768px) {
   .hero, .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 40px; }
   .hero { min-height: auto; padding: 60px 6%; }
+  .hero-visual { order: -1; }
   section { padding: 70px 6%; }
-  nav { padding: 14px 6%; }
+  nav { padding: 14px 6%; flex-wrap: wrap; }
+  .nav-brand { font-size: 12px; }
+  .nav-burger { display: flex; }
+  .nav-links {
+    display: none;
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 14px;
+    margin-top: 14px;
+    padding-top: 14px;
+    border-top: 1px solid var(--border);
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a { padding: 6px 0; font-size: 14px; }
+  .nav-toggle { align-self: flex-start; }
   .section-divider { margin: 0 6%; }
   .profile-card img { height: 340px; }
+  .btn-row { width: 100%; }
+  .btn { flex: 1 1 auto; justify-content: center; }
+  .writeup-card { padding: 28px; }
+  .crownweb-callout { padding: 24px; }
+  .theme-options { grid-template-columns: 1fr; }
+  #theme-modal { padding: 36px 24px; }
+}
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: clamp(2rem,9vw,2.6rem); }
+  .hero-subtitle { font-size: 14px; max-width: 100%; }
+  .hero-eyebrow { font-size: 10px; flex-wrap: wrap; }
+  section { padding: 56px 5.5%; }
+  h2 { font-size: clamp(1.5rem,7vw,2rem); }
+  .section-lead { font-size: 14px; margin-bottom: 40px; }
+  .profile-card img { height: 260px; }
+  .profile-card-footer { padding: 14px 16px; flex-wrap: wrap; gap: 8px; }
+  .btn-row { gap: 10px; }
+  .btn { padding: 11px 18px; font-size: 13px; }
+  .contact-card { padding: 14px 16px; gap: 12px; }
+  .contact-value { font-size: 13px; word-break: break-word; }
+  .writeup-card { padding: 20px; }
+  .writeup-meta { gap: 8px; }
+  .step { flex-direction: column; gap: 8px; padding: 14px; }
+  .callout-title { font-size: 18px; }
+  footer { padding: 32px 6%; font-size: 12px; }
+  footer div:first-child { line-height: 2; }
 }
 </style>
 </head>
@@ -338,8 +395,11 @@ body.light nav { background: rgba(248,250,252,0.9); }
 </div>
 
 <nav>
-  <div class="nav-brand"></div>
-  <div class="nav-links">
+  <div class="nav-brand">theophilus@dzingisai:~$</div>
+  <button class="nav-burger" id="nav-burger" onclick="toggleNav()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="nav-links">
     <a href="#about">About</a>
     <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
@@ -574,6 +634,18 @@ function toggleMode() {
   body.classList.toggle('light');
   btn.textContent = body.classList.contains('light') ? 'dark' : 'light';
 }
+
+function toggleNav() {
+  document.getElementById('nav-links').classList.toggle('open');
+  document.getElementById('nav-burger').classList.toggle('open');
+}
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('nav-links').classList.remove('open');
+    document.getElementById('nav-burger').classList.remove('open');
+  });
+});
 </script>
 
 <style>

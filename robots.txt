@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://theophilustinashe-collab.github.io/portfolio-dev/sitemap.xml

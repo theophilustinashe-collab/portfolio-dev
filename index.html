@@ -7,6 +7,12 @@
   <title>Theophilus — Web Developer & Creative Technologist</title>
   <meta name="description" content="Theophilus is a Zimbabwean web developer and creative technologist building premium websites, digital products and creative experiences.">
 
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon-192.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon-192.png">
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -90,14 +96,16 @@
     }
 
     .logo {
-      font-family: Manrope, sans-serif;
-      font-size: 1.35rem;
-      font-weight: 800;
-      letter-spacing: -.04em;
+      display: flex;
+      align-items: center;
     }
 
-    .logo span {
-      color: var(--gold);
+    .logo img {
+      height: 44px;
+      width: 44px;
+      object-fit: cover;
+      border-radius: 50%;
+      display: block;
     }
 
     .nav-links {
@@ -653,7 +661,9 @@
   <header id="header">
     <div class="container">
       <nav>
-        <a href="#" class="logo">THEO<span>.</span></a>
+        <a href="#" class="logo">
+          <img src="logo.png" alt="Theophilus Tinashe logo" />
+        </a>
 
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
